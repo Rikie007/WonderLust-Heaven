@@ -1,0 +1,406 @@
+INSERT INTO User_ (user_id, username, email_id, contact_number, pincode, address_) VALUES
+  (1, 'alice', 'alice@example.com', '1111111111', '560001', '123 A Street'),
+  (2, 'bob', 'bob@example.com', '2222222222', '560002', '234 B Avenue'),
+  (3, 'carol', 'carol@example.com', '3333333333', '560003', '345 C Road'),
+  (4, 'dave', 'dave@example.com', '4444444444', '560004', '456 D Blvd'),
+  (5, 'eve', 'eve@example.com', '5555555555', '560005', '567 E Lane'),
+  (6, 'frank', 'frank@example.com', '6666666666', '560006', '678 F Court'),
+  (7, 'grace', 'grace@example.com', '7777777777', '560007', '789 G Drive'),
+  (8, 'heidi', 'heidi@example.com', '8888888888', '560008', '890 H Terrace'),
+  (9, 'ivan', 'ivan@example.com', '9999999999', '560009', '901 I Circle'),
+  (10, 'judy', 'judy@example.com', '1010101010', '560010', '101 J Plaza');
+
+INSERT INTO Company (user_id, website, companyRegesterid) VALUES
+  (1, 'www.aliceco.com', 1001),
+  (2, 'www.bobco.com', 1002),
+  (3, 'www.carolco.com', 1003),
+  (4, 'www.daveco.com', 1004),
+  (5, 'www.eveco.com', 1005),
+  (6, 'www.frankco.com', 1006),
+  (7, 'www.graceco.com', 1007),
+  (8, 'www.heidico.com', 1008),
+  (9, 'www.ivanco.com', 1009),
+  (10, 'www.judyco.com', 1010);
+
+INSERT INTO LoggedInUser (user_id, premium) VALUES
+  (1, 'yes'),
+  (2, 'no'),
+  (3, 'yes'),
+  (4, 'no'),
+  (5, 'yes'),
+  (6, 'no'),
+  (7, 'yes'),
+  (8, 'no'),
+  (9, 'yes'),
+  (10, 'no');
+
+INSERT INTO Travel_Agent (agent_id, companyid, salary) VALUES
+  (1, 1, 3000.00),
+  (2, 2, 3200.00),
+  (3, 3, 3100.00),
+  (4, 4, 3300.00),
+  (5, 5, 3400.00),
+  (6, 6, 3500.00),
+  (7, 7, 3600.00),
+  (8, 8, 3700.00),
+  (9, 9, 3800.00),
+  (10, 10, 3900.00);
+
+INSERT INTO Guide (guide_id, yrs_of_experience, specialization, salary, availability_status) VALUES
+  (1, 5, 'History', 2500.00, 'Available'),
+  (2, 6, 'Nature', 2600.00, 'Busy'),
+  (3, 7, 'Architecture', 2700.00, 'Available'),
+  (4, 8, 'Art', 2800.00, 'Busy'),
+  (5, 4, 'Wildlife', 2900.00, 'Available'),
+  (6, 3, 'Food', 3000.00, 'Available'),
+  (7, 10, 'Culture', 3100.00, 'Busy'),
+  (8, 9, 'Photography', 3200.00, 'Available'),
+  (9, 11, 'Adventure', 3300.00, 'Busy'),
+  (10, 2, 'Local History', 2400.00, 'Available');
+
+INSERT INTO Languages_Known (guide_id, language_) VALUES
+  (1, 'English'),
+  (2, 'Spanish'),
+  (3, 'French'),
+  (4, 'German'),
+  (5, 'Italian'),
+  (6, 'Mandarin'),
+  (7, 'Japanese'),
+  (8, 'Korean'),
+  (9, 'Russian'),
+  (10, 'Hindi');
+
+INSERT INTO Admin (admin_id, skills, salary, department) VALUES
+  (1, 'Management', 5000.00, 'Operations'),
+  (2, 'IT', 5200.00, 'Tech'),
+  (3, 'HR', 5100.00, 'Human Resources'),
+  (4, 'Finance', 5300.00, 'Accounting'),
+  (5, 'Logistics', 5400.00, 'Operations'),
+  (6, 'Support', 5500.00, 'Customer Service'),
+  (7, 'Security', 5600.00, 'Admin'),
+  (8, 'Legal', 5700.00, 'Compliance'),
+  (9, 'Marketing', 5800.00, 'Sales'),
+  (10, 'IT Security', 5900.00, 'Tech');
+
+INSERT INTO Packages (package_id, companyid, package_name, departure_dest, arrival_dest, duration, itinerary, price, best_season, age_grp, grp_size, availability_, description_, inclusions, exclusions) VALUES
+  (1, 1, 'City Explorer', 'CityA', 'CityB', '3 days', 'Day1: CityA tour; Day2: Museum visit; Day3: Shopping', 4999.99, 'Spring', 'Adult', 'Small', 'Yes', 'Explore urban landmarks', 'Hotel, transport', 'Meals'),
+  (2, 2, 'Mountain Adventure', 'TownA', 'TownB', '5 days', 'Hiking and camping', 6999.99, 'Summer', 'All', 'Medium', 'Yes', 'Enjoy the mountains', 'Guided trek', 'Extras'),
+  (3, 3, 'Beach Holiday', 'CoastA', 'CoastB', '7 days', 'Resort stay and water sports', 8999.99, 'Winter', 'Family', 'Large', 'No', 'Relax by the sea', 'Resort, meals', 'Drinks'),
+  (4, 4, 'Cultural Journey', 'CityC', 'CityD', '4 days', 'City tours and cultural events', 5999.99, 'Autumn', 'Adult', 'Small', 'Yes', 'Immerse in local culture', 'Tickets included', 'Exhibits'),
+  (5, 5, 'Safari Expedition', 'BaseA', 'BaseB', '6 days', 'Wildlife viewing', 10999.99, 'Summer', 'All', 'Medium', 'Yes', 'Experience the wild', 'Safari jeep, guide', 'Insurance'),
+  (6, 6, 'Historical Tour', 'OldTown', 'HeritageSite', '2 days', 'Historic site visits', 3999.99, 'Spring', 'Adult', 'Small', 'Yes', 'Step back in time', 'Museum tickets', 'Snacks'),
+  (7, 7, 'Foodie Delight', 'GourmetCity', 'CuisineTown', '3 days', 'Food tours and cooking classes', 4999.99, 'Winter', 'Family', 'Small', 'Yes', 'Taste local cuisine', 'Cooking session', 'Drinks'),
+  (8, 8, 'Winter Wonderland', 'SnowCity', 'IcyTown', '5 days', 'Skiing and winter sports', 7999.99, 'Winter', 'All', 'Large', 'No', 'Enjoy snow adventures', 'Ski pass', 'Equipment'),
+  (9, 9, 'Desert Escape', 'DesertStart', 'OasisEnd', '4 days', 'Camel ride and desert camp', 5999.99, 'Autumn', 'Adult', 'Medium', 'Yes', 'Escape to the desert', 'Camp, food', 'Extra costs'),
+  (10, 10, 'Island Getaway', 'PortA', 'PortB', '7 days', 'Island hopping', 9999.99, 'Summer', 'Family', 'Large', 'Yes', 'Relax on islands', 'Boat ride, hotel', 'Taxes');
+
+INSERT INTO Package_Booking (user_id, package_id, booking_id, booking_date, booking_status, no_of_members, done_by) VALUES
+  (1, 1, 1, '2025-04-01', 'Confirmed', '2', 'online'),
+  (2, 2, 1, '2025-04-02', 'Pending', '4', 'agent'),
+  (3, 3, 1, '2025-04-03', 'Cancelled', '3', 'online'),
+  (4, 4, 1, '2025-04-04', 'Confirmed', '1', 'agent'),
+  (5, 5, 1, '2025-04-05', 'Confirmed', '5', 'online'),
+  (6, 6, 1, '2025-04-06', 'Pending', '2', 'agent'),
+  (7, 7, 1, '2025-04-07', 'Confirmed', '3', 'online'),
+  (8, 8, 1, '2025-04-08', 'Cancelled', '4', 'agent'),
+  (9, 9, 1, '2025-04-09', 'Confirmed', '2', 'online'),
+  (10, 10, 1, '2025-04-10', 'Confirmed', '6', 'agent');
+
+INSERT INTO Accommodation (accom_id, type_, name_, address_, contact_no, pincode, room_type, room_price, room_capacity, payment_method_accepted, cancellation_policy, checkin_time, checkout_time, availability_, amenities) VALUES
+  (1, 'Hotel', 'Hotel One', 'Address 1', '1111111111', '560001', 'Deluxe', 2000.00, 2, 'Cash, Card', '24h before checkin', '14:00', '12:00', 'Yes', 'WiFi, TV'),
+  (2, 'Resort', 'Resort Two', 'Address 2', '2222222222', '560002', 'Suite', 3000.00, 4, 'Card', '48h before checkin', '15:00', '11:00', 'No', 'Pool, Spa'),
+  (3, 'Hostel', 'Hostel Three', 'Address 3', '3333333333', '560003', 'Standard', 1500.00, 1, 'Cash', 'No refund', '13:00', '10:00', 'Yes', 'Breakfast'),
+  (4, 'Hotel', 'Hotel Four', 'Address 4', '4444444444', '560004', 'Business', 2500.00, 2, 'Cash, Card', '24h before checkin', '14:00', '12:00', 'Yes', 'Gym, WiFi'),
+  (5, 'Resort', 'Resort Five', 'Address 5', '5555555555', '560005', 'Deluxe', 3500.00, 3, 'Card', '48h before checkin', '15:00', '11:00', 'No', 'Pool, Bar'),
+  (6, 'Guest House', 'Guest Six', 'Address 6', '6666666666', '560006', 'Standard', 1800.00, 2, 'Cash, Card', '24h before checkin', '12:00', '10:00', 'Yes', 'Breakfast, WiFi'),
+  (7, 'Hotel', 'Hotel Seven', 'Address 7', '7777777777', '560007', 'Suite', 4000.00, 4, 'Cash, Card', '48h before checkin', '16:00', '12:00', 'Yes', 'Gym, Spa'),
+  (8, 'Resort', 'Resort Eight', 'Address 8', '8888888888', '560008', 'Deluxe', 3200.00, 3, 'Card', '24h before checkin', '14:00', '11:00', 'No', 'Pool, TV'),
+  (9, 'Hostel', 'Hostel Nine', 'Address 9', '9999999999', '560009', 'Standard', 1200.00, 1, 'Cash', 'No refund', '13:00', '10:00', 'Yes', 'Breakfast'),
+  (10, 'Guest House', 'Guest Ten', 'Address 10', '1010101010', '560010', 'Business', 2800.00, 2, 'Cash, Card', '24h before checkin', '14:00', '12:00', 'Yes', 'WiFi, Breakfast');
+
+INSERT INTO Accom_details (package_id, accom_id) VALUES
+  (1, 1),
+  (2, 2),
+  (3, 3),
+  (4, 4),
+  (5, 5),
+  (6, 6),
+  (7, 7),
+  (8, 8),
+  (9, 9),
+  (10, 10);
+
+INSERT INTO Accom_booking (user_id, package_id, booking_id, accom_id) VALUES
+  (1, 1, 1, 1),
+  (2, 2, 1, 2),
+  (3, 3, 1, 3),
+  (4, 4, 1, 4),
+  (5, 5, 1, 5),
+  (6, 6, 1, 6),
+  (7, 7, 1, 7),
+  (8, 8, 1, 8),
+  (9, 9, 1, 9),
+  (10, 10, 1, 10);
+
+INSERT INTO Transportation (trans_id, type_, carrier_company, classtype, available_seats, price, depart_location, dest_location, route_, depart_time, arrival_time, payment_method_accepted, cancellation_policy, amenities) VALUES
+  (1, 'Bus', 'Carrier A', 'Economy', 40, 500.00, 'CityX', 'CityY', 'Route1', '08:00', '12:00', 'Cash, Card', '24h cancellation', 'WiFi'),
+  (2, 'Train', 'Carrier B', 'AC', 100, 750.00, 'CityY', 'CityZ', 'Route2', '09:00', '13:00', 'Card', '48h cancellation', 'Meals'),
+  (3, 'Flight', 'Airline A', 'Economy', 180, 2500.00, 'Airport1', 'Airport2', 'Route3', '06:00', '08:00', 'Card', 'Non-refundable', 'In-flight Entertainment'),
+  (4, 'Bus', 'Carrier C', 'Business', 30, 600.00, 'CityA', 'CityB', 'Route4', '10:00', '14:00', 'Cash, Card', '24h cancellation', 'WiFi, AC'),
+  (5, 'Train', 'Carrier D', 'Sleeper', 120, 800.00, 'CityB', 'CityC', 'Route5', '07:00', '11:00', 'Card', '48h cancellation', 'Meals, AC'),
+  (6, 'Flight', 'Airline B', 'Business', 150, 3500.00, 'Airport3', 'Airport4', 'Route6', '12:00', '15:00', 'Card', 'Refundable', 'Lounge access'),
+  (7, 'Bus', 'Carrier E', 'Economy', 50, 550.00, 'CityC', 'CityD', 'Route7', '11:00', '15:00', 'Cash', '24h cancellation', 'WiFi'),
+  (8, 'Train', 'Carrier F', 'AC', 110, 780.00, 'CityD', 'CityE', 'Route8', '05:00', '09:00', 'Card', '48h cancellation', 'Meals'),
+  (9, 'Flight', 'Airline C', 'Economy', 160, 2700.00, 'Airport5', 'Airport6', 'Route9', '14:00', '17:00', 'Card', 'Non-refundable', 'In-flight Entertainment'),
+  (10, 'Bus', 'Carrier G', 'Business', 35, 620.00, 'CityE', 'CityF', 'Route10', '13:00', '17:00', 'Cash, Card', '24h cancellation', 'WiFi, AC');
+
+INSERT INTO Trans_details (package_id, trans_id) VALUES
+  (1, 1),
+  (2, 2),
+  (3, 3),
+  (4, 4),
+  (5, 5),
+  (6, 6),
+  (7, 7),
+  (8, 8),
+  (9, 9),
+  (10, 10);
+
+INSERT INTO Trans_Booking (user_id, package_id, booking_id, trans_id) VALUES
+  (1, 1, 1, 1),
+  (2, 2, 1, 2),
+  (3, 3, 1, 3),
+  (4, 4, 1, 4),
+  (5, 5, 1, 5),
+  (6, 6, 1, 6),
+  (7, 7, 1, 7),
+  (8, 8, 1, 8),
+  (9, 9, 1, 9),
+  (10, 10, 1, 10);
+
+INSERT INTO ExpenseTracking (user_id, package_id, booking_id, guide_id, date_time, amount, status_, category, payment_method, description_) VALUES
+  (1, 1, 1, 1, '2025-04-01 10:00:00', 500.00, 'Paid', 'Food', 'Card', 'Lunch expense'),
+  (2, 2, 1, 2, '2025-04-02 11:00:00', 600.00, 'Pending', 'Transport', 'Cash', 'Taxi fare'),
+  (3, 3, 1, 3, '2025-04-03 12:00:00', 700.00, 'Paid', 'Tickets', 'Card', 'Museum entry'),
+  (4, 4, 1, 4, '2025-04-04 13:00:00', 800.00, 'Paid', 'Meal', 'Cash', 'Dinner expense'),
+  (5, 5, 1, 5, '2025-04-05 14:00:00', 900.00, 'Pending', 'Guide', 'Card', 'Local guide fee'),
+  (6, 6, 1, 6, '2025-04-06 15:00:00', 550.00, 'Paid', 'Transport', 'Cash', 'Bus fare'),
+  (7, 7, 1, 7, '2025-04-07 16:00:00', 650.00, 'Paid', 'Food', 'Card', 'Snacks'),
+  (8, 8, 1, 8, '2025-04-08 17:00:00', 750.00, 'Pending', 'Tickets', 'Cash', 'Attraction entry'),
+  (9, 9, 1, 9, '2025-04-09 18:00:00', 850.00, 'Paid', 'Meal', 'Card', 'Lunch expense'),
+  (10, 10, 1, 10, '2025-04-10 19:00:00', 950.00, 'Paid', 'Misc', 'Cash', 'Other expense');
+
+INSERT INTO Group_members (member_id, name_, age, gender, contact_no) VALUES
+  (1, 'Member1', 25, 'Male', '1111000001'),
+  (2, 'Member2', 30, 'Female', '1111000002'),
+  (3, 'Member3', 22, 'Male', '1111000003'),
+  (4, 'Member4', 28, 'Female', '1111000004'),
+  (5, 'Member5', 35, 'Male', '1111000005'),
+  (6, 'Member6', 27, 'Female', '1111000006'),
+  (7, 'Member7', 32, 'Male', '1111000007'),
+  (8, 'Member8', 24, 'Female', '1111000008'),
+  (9, 'Member9', 29, 'Male', '1111000009'),
+  (10, 'Member10', 31, 'Female', '1111000010');
+
+INSERT INTO Traveller_info (user_id, package_id, booking_id, member_id) VALUES
+  (1, 1, 1, 1),
+  (2, 2, 1, 2),
+  (3, 3, 1, 3),
+  (4, 4, 1, 4),
+  (5, 5, 1, 5),
+  (6, 6, 1, 6),
+  (7, 7, 1, 7),
+  (8, 8, 1, 8),
+  (9, 9, 1, 9),
+  (10, 10, 1, 10);
+
+INSERT INTO Invoice_details (transaction_id, payment_method) VALUES
+  (1, 'Card'),
+  (2, 'Cash'),
+  (3, 'Card'),
+  (4, 'Online'),
+  (5, 'Card'),
+  (6, 'Cash'),
+  (7, 'Online'),
+  (8, 'Card'),
+  (9, 'Cash'),
+  (10, 'Online');
+
+INSERT INTO Payment_done (user_id, package_id, booking_id, transaction_id, inv_date, time_, paid, outstanding) VALUES
+  (1, 1, 1, 1, '2025-04-01', '10:00', 4999.99, 0.00),
+  (2, 2, 1, 2, '2025-04-02', '11:00', 6999.99, 0.00),
+  (3, 3, 1, 3, '2025-04-03', '12:00', 8999.99, 0.00),
+  (4, 4, 1, 4, '2025-04-04', '13:00', 5999.99, 0.00),
+  (5, 5, 1, 5, '2025-04-05', '14:00', 10999.99, 0.00),
+  (6, 6, 1, 6, '2025-04-06', '15:00', 3999.99, 0.00),
+  (7, 7, 1, 7, '2025-04-07', '16:00', 4999.99, 0.00),
+  (8, 8, 1, 8, '2025-04-08', '17:00', 7999.99, 0.00),
+  (9, 9, 1, 9, '2025-04-09', '18:00', 5999.99, 0.00),
+  (10, 10, 1, 10, '2025-04-10', '19:00', 9999.99, 0.00);
+
+INSERT INTO Cancellation (cancellation_id, cancellation_fees) VALUES
+  (1, 100.00),
+  (2, 150.00),
+  (3, 200.00),
+  (4, 120.00),
+  (5, 130.00),
+  (6, 110.00),
+  (7, 160.00),
+  (8, 180.00),
+  (9, 140.00),
+  (10, 170.00);
+
+INSERT INTO Cancelled (user_id, package_id, booking_id, cancellation_id, date_, status_, reason, refund_amount) VALUES
+  (1, 1, 1, 1, '2025-04-02', 'Processed', 'Change of plans', 4899.99),
+  (2, 2, 1, 2, '2025-04-03', 'Processed', 'Personal reasons', 6849.99),
+  (3, 3, 1, 3, '2025-04-04', 'Pending', 'Illness', 8799.99),
+  (4, 4, 1, 4, '2025-04-05', 'Processed', 'Schedule conflict', 5879.99),
+  (5, 5, 1, 5, '2025-04-06', 'Processed', 'Weather issues', 10869.99),
+  (6, 6, 1, 6, '2025-04-07', 'Pending', 'Family emergency', 3889.99),
+  (7, 7, 1, 7, '2025-04-08', 'Processed', 'Health reasons', 4889.99),
+  (8, 8, 1, 8, '2025-04-09', 'Processed', 'Other', 7819.99),
+  (9, 9, 1, 9, '2025-04-10', 'Pending', 'Change of plans', 5899.99),
+  (10, 10, 1, 10, '2025-04-11', 'Processed', 'Personal reasons', 9829.99);
+
+INSERT INTO Pack_Feedback (user_id, package_id, booking_id, rating, review, date_) VALUES
+  (1, 1, 1, 5, 'Excellent package!', '2025-04-02'),
+  (2, 2, 1, 4, 'Very good experience', '2025-04-03'),
+  (3, 3, 1, 3, 'Average service', '2025-04-04'),
+  (4, 4, 1, 5, 'Loved the cultural touch', '2025-04-05'),
+  (5, 5, 1, 4, 'Great safari!', '2025-04-06'),
+  (6, 6, 1, 3, 'Could be better', '2025-04-07'),
+  (7, 7, 1, 5, 'Delicious and fun', '2025-04-08'),
+  (8, 8, 1, 4, 'Enjoyed the winter sports', '2025-04-09'),
+  (9, 9, 1, 3, 'Good, but had issues', '2025-04-10'),
+  (10, 10, 1, 5, 'A perfect getaway!', '2025-04-11');
+
+INSERT INTO Agent_feedback (user_id, package_id, booking_id, agent_id, rating, review, date_) VALUES
+  (1, 1, 1, 1, 5, 'Very helpful agent', '2025-04-02'),
+  (2, 2, 1, 2, 4, 'Responsive and kind', '2025-04-03'),
+  (3, 3, 1, 3, 3, 'Okay service', '2025-04-04'),
+  (4, 4, 1, 4, 5, 'Excellent experience', '2025-04-05'),
+  (5, 5, 1, 5, 4, 'Good service', '2025-04-06'),
+  (6, 6, 1, 6, 3, 'Could be improved', '2025-04-07'),
+  (7, 7, 1, 7, 5, 'Outstanding assistance', '2025-04-08'),
+  (8, 8, 1, 8, 4, 'Very professional', '2025-04-09'),
+  (9, 9, 1, 9, 3, 'Satisfactory service', '2025-04-10'),
+  (10, 10, 1, 10, 5, 'Great job', '2025-04-11');
+
+INSERT INTO Guide_feedback (user_id, package_id, booking_id, guide_id, rating, review, date_) VALUES
+  (1, 1, 1, 1, 5, 'Amazing guide!', '2025-04-02'),
+  (2, 2, 1, 2, 4, 'Very knowledgeable', '2025-04-03'),
+  (3, 3, 1, 3, 3, 'Average guide', '2025-04-04'),
+  (4, 4, 1, 4, 5, 'Perfect tour guide', '2025-04-05'),
+  (5, 5, 1, 5, 4, 'Good insights', '2025-04-06'),
+  (6, 6, 1, 6, 3, 'Not very engaging', '2025-04-07'),
+  (7, 7, 1, 7, 5, 'Outstanding tour', '2025-04-08'),
+  (8, 8, 1, 8, 4, 'Very informative', '2025-04-09'),
+  (9, 9, 1, 9, 3, 'It was okay', '2025-04-10'),
+  (10, 10, 1, 10, 5, 'Fantastic guide', '2025-04-11');
+
+INSERT INTO Commission_earned_agent (user_id, package_id, booking_id, agent_id, date_, details, amount) VALUES
+  (1, 1, 1, 1, '2025-04-02', 'Commission for sale', 100.00),
+  (2, 2, 1, 2, '2025-04-03', 'Commission for sale', 150.00),
+  (3, 3, 1, 3, '2025-04-04', 'Commission for sale', 200.00),
+  (4, 4, 1, 4, '2025-04-05', 'Commission for sale', 120.00),
+  (5, 5, 1, 5, '2025-04-06', 'Commission for sale', 130.00),
+  (6, 6, 1, 6, '2025-04-07', 'Commission for sale', 110.00),
+  (7, 7, 1, 7, '2025-04-08', 'Commission for sale', 160.00),
+  (8, 8, 1, 8, '2025-04-09', 'Commission for sale', 180.00),
+  (9, 9, 1, 9, '2025-04-10', 'Commission for sale', 140.00),
+  (10, 10, 1, 10, '2025-04-11', 'Commission for sale', 170.00);
+
+INSERT INTO Commission_earned_guide (user_id, package_id, booking_id, guide_id, date_, details, amount, chosen_by) VALUES
+  (1, 1, 1, 1, '2025-04-02', 'Commission for guide', 90.00, 'Client'),
+  (2, 2, 1, 2, '2025-04-03', 'Commission for guide', 95.00, 'Client'),
+  (3, 3, 1, 3, '2025-04-04', 'Commission for guide', 85.00, 'Client'),
+  (4, 4, 1, 4, '2025-04-05', 'Commission for guide', 100.00, 'Client'),
+  (5, 5, 1, 5, '2025-04-06', 'Commission for guide', 105.00, 'Client'),
+  (6, 6, 1, 6, '2025-04-07', 'Commission for guide', 80.00, 'Client'),
+  (7, 7, 1, 7, '2025-04-08', 'Commission for guide', 110.00, 'Client'),
+  (8, 8, 1, 8, '2025-04-09', 'Commission for guide', 115.00, 'Client'),
+  (9, 9, 1, 9, '2025-04-10', 'Commission for guide', 90.00, 'Client'),
+  (10, 10, 1, 10, '2025-04-11', 'Commission for guide', 120.00, 'Client');
+
+INSERT INTO Preference_details (pref_id, preference_level, interest_category, interest_details) VALUES
+  (1, 'High', 'Adventure', 'Mountains and trekking'),
+  (2, 'Medium', 'Culture', 'Historical sites'),
+  (3, 'Low', 'Food', 'Local cuisines'),
+  (4, 'High', 'Relaxation', 'Beach resorts'),
+  (5, 'Medium', 'Wildlife', 'Safari and nature'),
+  (6, 'Low', 'Shopping', 'Local markets'),
+  (7, 'High', 'Sports', 'Water sports'),
+  (8, 'Medium', 'Art', 'Museums and galleries'),
+  (9, 'Low', 'Music', 'Local concerts'),
+  (10, 'High', 'Nightlife', 'Clubs and bars');
+
+INSERT INTO Preferences (user_id, pref_id) VALUES
+  (1, 1),
+  (2, 2),
+  (3, 3),
+  (4, 4),
+  (5, 5),
+  (6, 6),
+  (7, 7),
+  (8, 8),
+  (9, 9),
+
+INSERT INTO Promotion (promotion_id, type_, title, description_, status_, startdate, enddate, conditions) VALUES
+  ('PROMO1', 'Discount', 'Spring Sale', '20% off for early bookings', 'Active', '2025-03-01', '2025-03-31', 'Min booking $5000'),
+  ('PROMO2', 'Cashback', 'Summer Cashback', '10% cashback on every booking', 'Active', '2025-06-01', '2025-06-30', 'One time use'),
+  ('PROMO3', 'Discount', 'Winter Special', '15% off on select packages', 'Inactive', '2025-12-01', '2025-12-31', 'No combine'),
+  ('PROMO4', 'Bonus', 'Holiday Bonus', 'Free meal vouchers', 'Active', '2025-11-20', '2025-11-30', 'Applicable on weekends'),
+  ('PROMO5', 'Discount', 'Flash Sale', '25% discount for 24 hours', 'Active', '2025-04-15', '2025-04-16', 'First come first served'),
+  ('PROMO6', 'Cashback', 'New Year Offer', '5% cashback on all bookings', 'Active', '2025-01-01', '2025-01-10', 'No minimum'),
+  ('PROMO7', 'Discount', 'Festival Offer', '10% off during festival', 'Active', '2025-08-01', '2025-08-07', 'Limited seats'),
+  ('PROMO8', 'Bonus', 'Referral Bonus', 'Earn extra points for referrals', 'Active', '2025-05-01', '2025-05-31', 'Refer 2 friends'),
+  ('PROMO9', 'Discount', 'Early Bird', 'Early bookings get 15% off', 'Active', '2025-02-01', '2025-02-28', 'Booking 30 days ahead'),
+  ('PROMO10', 'Cashback', 'Loyalty Offer', 'Exclusive cashback for repeat customers', 'Active', '2025-07-01', '2025-07-31', 'Only for loyalty members');
+
+INSERT INTO Discount_offer (user_id, package_id, booking_id, promotion_id, offered_discount) VALUES
+  (1, 1, 1, 'PROMO1', 20.00),
+  (2, 2, 1, 'PROMO2', 10.00),
+  (3, 3, 1, 'PROMO3', 15.00),
+  (4, 4, 1, 'PROMO4', 0.00),
+  (5, 5, 1, 'PROMO5', 25.00),
+  (6, 6, 1, 'PROMO6', 5.00),
+  (7, 7, 1, 'PROMO7', 10.00),
+  (8, 8, 1, 'PROMO8', 0.00),
+  (9, 9, 1, 'PROMO9', 15.00),
+  (10, 10, 1, 'PROMO10', 0.00);
+
+INSERT INTO Client_Agent_logs (user_id, agent_id, date_time, type_, to_whom, subject_, status_, content) VALUES
+  (1, 1, '2025-04-01 09:00:00', 'Inquiry', 'Agent', 'Booking Query', 'Resolved', 'Asked about package details'),
+  (2, 2, '2025-04-02 09:15:00', 'Complaint', 'Agent', 'Delay Issue', 'Pending', 'Travel delay complaint'),
+  (3, 3, '2025-04-03 09:30:00', 'Inquiry', 'Agent', 'Rate Info', 'Resolved', 'Asked about fare rates'),
+  (4, 4, '2025-04-04 09:45:00', 'Feedback', 'Agent', 'Service Feedback', 'Resolved', 'Positive feedback given'),
+  (5, 5, '2025-04-05 10:00:00', 'Inquiry', 'Agent', 'Booking Process', 'Pending', 'Clarification on booking'),
+  (6, 6, '2025-04-06 10:15:00', 'Complaint', 'Agent', 'Cancellation', 'Resolved', 'Issue with cancellation process'),
+  (7, 7, '2025-04-07 10:30:00', 'Feedback', 'Agent', 'Service Feedback', 'Resolved', 'Very satisfied with service'),
+  (8, 8, '2025-04-08 10:45:00', 'Inquiry', 'Agent', 'Discounts', 'Pending', 'Asking about promo codes'),
+  (9, 9, '2025-04-09 11:00:00', 'Feedback', 'Agent', 'Agent Behavior', 'Resolved', 'Polite and efficient'),
+  (10, 10, '2025-04-10 11:15:00', 'Inquiry', 'Agent', 'Extra Info', 'Resolved', 'Requested additional package details');
+
+INSERT INTO Client_Guide_logs (user_id, guide_id, date_time, type_, to_whom, subject_, status_, content) VALUES
+  (1, 1, '2025-04-01 12:00:00', 'Inquiry', 'Guide', 'Tour Schedule', 'Resolved', 'Asked about tour schedule'),
+  (2, 2, '2025-04-02 12:15:00', 'Feedback', 'Guide', 'Guide Rating', 'Resolved', 'Complimented the guide'),
+  (3, 3, '2025-04-03 12:30:00', 'Complaint', 'Guide', 'Late Start', 'Pending', 'Guide started late'),
+  (4, 4, '2025-04-04 12:45:00', 'Inquiry', 'Guide', 'Itinerary Detail', 'Resolved', 'Requested detailed itinerary'),
+  (5, 5, '2025-04-05 13:00:00', 'Feedback', 'Guide', 'Knowledgeable', 'Resolved', 'Very knowledgeable guide'),
+  (6, 6, '2025-04-06 13:15:00', 'Complaint', 'Guide', 'Rudeness', 'Pending', 'Guide was not courteous'),
+  (7, 7, '2025-04-07 13:30:00', 'Inquiry', 'Guide', 'Local Info', 'Resolved', 'Asked about local spots'),
+  (8, 8, '2025-04-08 13:45:00', 'Feedback', 'Guide', 'Enthusiasm', 'Resolved', 'Very enthusiastic guide'),
+  (9, 9, '2025-04-09 14:00:00', 'Complaint', 'Guide', 'Pace Too Fast', 'Pending', 'Tour was too rushed'),
+  (10, 10, '2025-04-10 14:15:00', 'Inquiry', 'Guide', 'Accommodation Tips', 'Resolved', 'Requested accommodation advice');
+
+INSERT INTO Agent_Guide_logs (agent_id, guide_id, date_time, type_, to_whom, subject_, status_, content) VALUES
+  (1, 1, '2025-04-01 15:00:00', 'Collaboration', 'Guide', 'Coordination', 'Resolved', 'Coordinated itinerary details'),
+  (2, 2, '2025-04-02 15:15:00', 'Meeting', 'Guide', 'Schedule Sync', 'Resolved', 'Scheduled meeting time'),
+  (3, 3, '2025-04-03 15:30:00', 'Update', 'Guide', 'Client Feedback', 'Resolved', 'Shared client feedback'),
+  (4, 4, '2025-04-04 15:45:00', 'Coordination', 'Guide', 'Tour Details', 'Resolved', 'Discussed tour details'),
+  (5, 5, '2025-04-05 16:00:00', 'Meeting', 'Guide', 'Booking Update', 'Pending', 'Booked a new package'),
+  (6, 6, '2025-04-06 16:15:00', 'Update', 'Guide', 'Itinerary Change', 'Resolved', 'Changed tour itinerary'),
+  (7, 7, '2025-04-07 16:30:00', 'Coordination', 'Guide', 'Client Query', 'Resolved', 'Addressed client query'),
+  (8, 8, '2025-04-08 16:45:00', 'Meeting', 'Guide', 'Discount Discussion', 'Pending', 'Discussed client discount'),
+  (9, 9, '2025-04-09 17:00:00', 'Update', 'Guide', 'Feedback Share', 'Resolved', 'Shared client feedback'),
+  (10, 10, '2025-04-10 17:15:00', 'Coordination', 'Guide', 'Next Tour', 'Resolved', 'Planned next tour schedule');
